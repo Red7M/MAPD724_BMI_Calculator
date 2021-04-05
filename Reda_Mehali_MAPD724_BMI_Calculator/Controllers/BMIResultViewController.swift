@@ -34,7 +34,7 @@ class BMIResultViewController: UIViewController {
     }
     
     @IBAction func reCalculatePressed(_ sender: UIButton) {
-        NotificationCenter.default.post(name: Notification.Name("heightWeightNotification"), object: nil)
+        NotificationCenter.default.post(name: Notification.Name("heightWeightNotification"), object: nil, userInfo: ["bmiValue": bmiValue!])
         
         self.dismiss(animated: true, completion: nil)
     }
