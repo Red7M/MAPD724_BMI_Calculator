@@ -16,13 +16,10 @@ class BMIResultViewController: UIViewController {
     @IBOutlet var reCalculateButton: UIButton!
     @IBOutlet var reCalculateBottomConstraint: NSLayoutConstraint!
     
-    
-    
     //Variables
     var bmiValue: String?
     var bmiColor: UIColor?
     var advice: String?
-    
     
     //Views
     override func viewDidLoad() {
@@ -37,6 +34,8 @@ class BMIResultViewController: UIViewController {
     }
     
     @IBAction func reCalculatePressed(_ sender: UIButton) {
+        NotificationCenter.default.post(name: Notification.Name("heightWeightNotification"), object: nil)
+        
         self.dismiss(animated: true, completion: nil)
     }
 }

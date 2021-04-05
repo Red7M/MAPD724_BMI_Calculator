@@ -19,9 +19,11 @@ class BMIHomeViewController: UIViewController {
     @IBOutlet var stackviewBottomConstraint: NSLayoutConstraint!
     
     var bmiCalculator = BMICalculator()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(heightWeightChange(_:)), name: Notification.Name("heightWeightNotification"), object: nil)
     }
 
     @IBAction func calculatePressed(_ sender: UIButton) {
@@ -46,6 +48,10 @@ class BMIHomeViewController: UIViewController {
             resultVC.bmiColor = bmiCalculator.getColor()
             resultVC.advice = bmiCalculator.getAdvice()
         }
+    }
+    
+    @objc func heightWeightChange(_ height: Int) {
+        print(height)
     }
 }
 
