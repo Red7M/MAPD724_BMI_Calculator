@@ -18,6 +18,7 @@ class BMIHomeViewController: UIViewController {
     @IBOutlet var weightSlider: UISlider!
     @IBOutlet var calculateBtn: UIButton!
     @IBOutlet var stackviewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var helpBtn: UIButton!
     
     var bmiCalculator = BMICalculator()
     
@@ -25,16 +26,27 @@ class BMIHomeViewController: UIViewController {
         super.viewDidLoad()
         
         NotificationCenter.default.addObserver(self, selector: #selector(heightWeightChange(_:)), name: Notification.Name("heightWeightNotification"), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(colorChange(_:)), name: Notification.Name("colorChangeNotification"), object: nil)
     }
+    
+    @IBAction func helpPressed(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+        let vc = storyboard.instantiateViewController(identifier: "HelpViewController") as! HelpViewController;
+        self.present(vc, animated: true, completion: nil);
+    }
+    
 
     @IBAction func calculatePressed(_ sender: UIButton) {
         bmiCalculator.calculateBMI(height: heightSlider.value, weight: weightSlider.value)
+        
         self.performSegue(withIdentifier: "goToResult", sender: self)
     }
     
     @IBAction func heightChanged(_ sender: UISlider) {
         let heightValue = String(format: "%.2f", sender.value)
         self.heightLabel.text = heightValue + "m"
+        UIWindow.init().tintColor = UIColor.blue
     }
     
     @IBAction func weightChanged(_ sender: UISlider) {
@@ -61,6 +73,16 @@ class BMIHomeViewController: UIViewController {
         } else {
             self.showToast(message: "You are in a good shape", font: .systemFont(ofSize: 12.0))
         }
+    }
+    
+    @objc func colorChange(_ notification: Notification) {
+        let color = notification.userInfo!["color"]! as! UIColor
+        helpBtn.tintColor = color
+        calculateBtn.backgroundColor = color
+        heightSlider.minimumTrackTintColor = color
+        heightSlider.thumbTintColor = color
+        weightSlider.minimumTrackTintColor = color
+        weightSlider.thumbTintColor = color
     }
     
     func showToast(message : String, font: UIFont) {

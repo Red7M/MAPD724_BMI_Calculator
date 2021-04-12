@@ -1,0 +1,11 @@
+//
+//  HelpDocumentationViewController.swift
+//  Reda_Mehali_MAPD724_BMI_Calculator
+//
+//  Created by Reda Mehali on 4/11/21.
+//
+
+import UIKit
+
+class HelpDocumentationViewController: UIViewController {
+}

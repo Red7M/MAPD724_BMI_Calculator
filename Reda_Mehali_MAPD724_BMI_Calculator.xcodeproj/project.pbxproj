@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E60B7C726239D7700963459 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E60B7C626239D7700963459 /* HelpViewController.swift */; };
+		9E60B7D02623AF7600963459 /* DocumentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E60B7CF2623AF7600963459 /* DocumentationViewController.swift */; };
+		9E60B7D32623B0D100963459 /* ColorChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E60B7D22623B0D100963459 /* ColorChangeViewController.swift */; };
 		9EE221522611341100CF2A7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE221512611341100CF2A7B /* AppDelegate.swift */; };
 		9EE221542611341100CF2A7B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE221532611341100CF2A7B /* SceneDelegate.swift */; };
 		9EE221562611341100CF2A7B /* BMIHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE221552611341100CF2A7B /* BMIHomeViewController.swift */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E60B7C626239D7700963459 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		9E60B7CF2623AF7600963459 /* DocumentationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentationViewController.swift; sourceTree = "<group>"; };
+		9E60B7D22623B0D100963459 /* ColorChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChangeViewController.swift; sourceTree = "<group>"; };
 		9EE2214E2611341100CF2A7B /* Reda_Mehali_MAPD724_BMI_Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reda_Mehali_MAPD724_BMI_Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EE221512611341100CF2A7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EE221532611341100CF2A7B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +87,9 @@
 			children = (
 				9EE221552611341100CF2A7B /* BMIHomeViewController.swift */,
 				9EE2217A2611388800CF2A7B /* BMIResultViewController.swift */,
+				9E60B7C626239D7700963459 /* HelpViewController.swift */,
+				9E60B7CF2623AF7600963459 /* DocumentationViewController.swift */,
+				9E60B7D22623B0D100963459 /* ColorChangeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -173,11 +182,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E60B7D32623B0D100963459 /* ColorChangeViewController.swift in Sources */,
 				9EE221562611341100CF2A7B /* BMIHomeViewController.swift in Sources */,
 				9EE221702611357500CF2A7B /* RoundButton.swift in Sources */,
 				9EE221522611341100CF2A7B /* AppDelegate.swift in Sources */,
+				9E60B7C726239D7700963459 /* HelpViewController.swift in Sources */,
 				9EE2216C2611351300CF2A7B /* BMIModel.swift in Sources */,
 				9EE221732611359B00CF2A7B /* BMICalculator.swift in Sources */,
+				9E60B7D02623AF7600963459 /* DocumentationViewController.swift in Sources */,
 				9EE2217B2611388800CF2A7B /* BMIResultViewController.swift in Sources */,
 				9EE221542611341100CF2A7B /* SceneDelegate.swift in Sources */,
 			);
