@@ -357,24 +357,36 @@ The app compares your recent calculated BMI against your previous calculated BMI
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uJW-p2-5g5">
-                                <rect key="frame" x="91" y="319.5" width="232" height="203.5"/>
+                                <rect key="frame" x="16" y="287.5" width="382" height="267.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR RESULT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8d-Gp-Lyr">
-                                        <rect key="frame" x="0.0" y="0.0" width="232" height="42"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR RESULT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8d-Gp-Lyr">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="42"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQQ-tz-03G">
-                                        <rect key="frame" x="0.0" y="50" width="232" height="95.5"/>
+                                        <rect key="frame" x="0.0" y="50" width="382" height="95.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="80"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1j4-fA-LOC">
-                                        <rect key="frame" x="0.0" y="153.5" width="232" height="50"/>
+                                        <rect key="frame" x="0.0" y="153.5" width="382" height="50"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                         <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMI CHANGE:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkm-dj-OcY">
+                                        <rect key="frame" x="0.0" y="211.5" width="382" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7M-CY-XSh">
+                                        <rect key="frame" x="0.0" y="243.5" width="382" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -409,6 +421,7 @@ The app compares your recent calculated BMI against your previous calculated BMI
                     <navigationItem key="navigationItem" id="nSo-hu-3JN"/>
                     <connections>
                         <outlet property="adviceLabel" destination="1j4-fA-LOC" id="5mg-tx-0cR"/>
+                        <outlet property="bmiChangeVal" destination="o7M-CY-XSh" id="olR-rJ-uzQ"/>
                         <outlet property="bmiLabel" destination="GQQ-tz-03G" id="Sfj-ju-0Yq"/>
                         <outlet property="reCalculateBottomConstraint" destination="QdB-gm-ybd" id="KDf-yE-8yb"/>
                         <outlet property="reCalculateButton" destination="RdZ-vd-cnq" id="Y5y-pz-vLg"/>
